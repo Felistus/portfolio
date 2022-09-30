@@ -1,4 +1,11 @@
 import Head from "next/head";
+import AboutIcon from "../public/icons/AboutIcon";
+import HomeIcon from "../public/icons/HomeIcon";
+import ServiceIcon from "../public/icons/ServiceIcon";
+import ResumeIcon from "../public/icons/ResumeIcon";
+import ProjectsIcon from "../public/icons/ProjectsIcon";
+import ContactIcon from "../public/icons/ContactIcon";
+import WorkIcon from "../public/icons/WorkIcon";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
@@ -17,10 +24,44 @@ export default function Home() {
           property="og:description"
           content="Search homes for sale, new construction homes, apartments, and houses for rent. See property values. Shop mortgages."
         />
+        <meta property="og:type" content="website" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main></main>
+      <main className="bg-[#181A1B]">
+        <section className="flex">
+          <div className="flex flex-col justify-between items-center py-12 w-24 h-screen border-r-2 border-[#1D1F20] ">
+            <div className={styles.logo}>JT</div>
+
+            <div className="flex flex-col my-8 flex-1 space-y-10 justify-center">
+              <div className="hover:text-[#D3AE4E] cursor-pointer ">
+                <HomeIcon />
+              </div>
+              <div className="hover:text-[#D3AE4E] cursor-pointer ">
+                <AboutIcon />
+              </div>
+              <div className="hover:text-[#D3AE4E] cursor-pointer ">
+                <ServiceIcon />
+              </div>
+              <div className="hover:text-[#D3AE4E] cursor-pointer ">
+                <WorkIcon />
+              </div>
+              <div className="hover:text-[#D3AE4E] cursor-pointer ">
+                <ProjectsIcon />
+              </div>
+              <div className="hover:text-[#D3AE4E] cursor-pointer ">
+                <ContactIcon />
+              </div>
+            </div>
+
+            <div className="hover:text-[#D3AE4E] cursor-pointer ">
+              <ResumeIcon />
+            </div>
+          </div>
+          <div className="h-screen flex-1">router-view</div>
+        </section>
+      </main>
     </div>
   );
 }

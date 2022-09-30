@@ -105,6 +105,9 @@
 
 .logo {
   font-family: "Bungee Spice";
+  font-size: 30px;
+  line-height: 36px;
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {
