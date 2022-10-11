@@ -1,13 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import AboutIcon from "../public/icons/AboutIcon";
-import HomeIcon from "../public/icons/HomeIcon";
-import ServiceIcon from "../public/icons/ServiceIcon";
-import ResumeIcon from "../public/icons/ResumeIcon";
-import ProjectsIcon from "../public/icons/ProjectsIcon";
-import ContactIcon from "../public/icons/ContactIcon";
-import WorkIcon from "../public/icons/WorkIcon";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import SideMenu from "../components/SideMenu";
 
 export default function Home() {
   return (
@@ -31,35 +24,30 @@ export default function Home() {
 
       <main className="bg-[#181A1B]">
         <section className="flex">
-          <div className="flex flex-col justify-between items-center py-12 w-24 h-screen border-r-2 border-[#1D1F20] ">
-            <div className={styles.logo}>JT</div>
-
-            <div className="flex flex-col my-8 flex-1 space-y-10 justify-center">
-              <div className="hover:text-[#D3AE4E] cursor-pointer ">
-                <HomeIcon />
+          <div>
+            <SideMenu />
+          </div>
+          <div className="h-screen flex-1 w-screen px-10 overflow-auto">
+            <div className="h-screen w-full flex items-center justify-between 2xl:max-w-7xl 2xl:mx-auto ">
+              <div className="w-[400px] hello-style">
+                <p className="text-lg md:text-4xl font-bold mb-3  ">
+                  Hello there!
+                </p>
+                <p className="text-lg md:text-3xl font-semibold">
+                  I am <span>Ezeugo Felistus Obieze</span>
+                </p>
+                <p className="text-base font-light italic text-gray-500">
+                  and I am a{" "}
+                  <span className="text-lg ml-1 text-gray-300">
+                    Front-End Developer
+                  </span>
+                </p>
               </div>
-              <div className="hover:text-[#D3AE4E] cursor-pointer ">
-                <AboutIcon />
+              <div className="">
+                <img src="/anim.svg" alt="my anim" />
               </div>
-              <div className="hover:text-[#D3AE4E] cursor-pointer ">
-                <ServiceIcon />
-              </div>
-              <div className="hover:text-[#D3AE4E] cursor-pointer ">
-                <WorkIcon />
-              </div>
-              <div className="hover:text-[#D3AE4E] cursor-pointer ">
-                <ProjectsIcon />
-              </div>
-              <div className="hover:text-[#D3AE4E] cursor-pointer ">
-                <ContactIcon />
-              </div>
-            </div>
-
-            <div className="hover:text-[#D3AE4E] cursor-pointer ">
-              <ResumeIcon />
             </div>
           </div>
-          <div className="h-screen flex-1">router-view</div>
         </section>
       </main>
     </div>
