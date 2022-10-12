@@ -1,12 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 export default function About() {
   return (
-    <div className="mb-4 w-full 2xl:max-w-7xl 2xl:mx-auto">
+    <div className="w-full 2xl:max-w-7xl 2xl:mx-auto">
       <div>
         <p className="header-font text-gray-300">About Me</p>
       </div>
       <div className="flex space-x-20 leading-6">
-        <div className="w-64 h-64 ">
+        <div className="w-64 h-64 rounded-full hover:border-2 ">
           <img src="/avatar.svg" alt="my avatar" />
         </div>
         <div className="bg-[#383838] flex-1 rounded-xl p-5">

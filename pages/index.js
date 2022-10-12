@@ -1,8 +1,11 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import React, { Suspense } from "react";
-import About from "../components/About";
-import Intro from "../components/Intro";
 const SideMenu = React.lazy(() => import("../components/SideMenu"));
+const About = React.lazy(() => import("../components/About"));
+const Intro = React.lazy(() => import("../components/Intro"));
+const Service = React.lazy(() => import("../components/Service"));
 
 export default function Home() {
   return (
@@ -17,7 +20,7 @@ export default function Home() {
         />
         <meta
           property="og:description"
-          content="Search for portfolio, reactjs projects, nextjs projects, react, next, javascript, typescript, soft skills technical skills"
+          content="my portfolio, reactjs projects, nextjs projects, reactjs, nextjs, javascript, typescript, soft skills, technical skills"
         />
         <meta property="og:type" content="website" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,6 +38,7 @@ export default function Home() {
             <div className="h-screen flex-1 w-screen px-12 overflow-auto">
               <Intro />
               <About />
+              <Service />
             </div>
           </Suspense>
         </section>

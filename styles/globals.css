@@ -28,8 +28,12 @@ a {
 .header-font {
   font-family: "Creepster", cursive;
   font-size: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
+.card-body-font {
+  font-family: "Pridi", serif;
+}
+
 /* 
 font-family: 'Bree Serif', serif;
 font-family: 'Creepster', cursive;
