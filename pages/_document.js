@@ -23,7 +23,7 @@ export default function Document() {
           crossorigin="true"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Creepster&family=Monoton&family=Pridi&family=Tangerine&display=swap"
           rel="stylesheet"
         />
       </Head>

@@ -1,6 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import SideMenu from "../components/SideMenu";
+import React, { Suspense } from "react";
+import About from "../components/About";
+import Intro from "../components/Intro";
+const SideMenu = React.lazy(() => import("../components/SideMenu"));
 
 export default function Home() {
   return (
@@ -24,30 +26,17 @@ export default function Home() {
 
       <main className="bg-[#181A1B]">
         <section className="flex">
-          <div>
-            <SideMenu />
-          </div>
-          <div className="h-screen flex-1 w-screen px-10 overflow-auto">
-            <div className="h-screen w-full flex items-center justify-between 2xl:max-w-7xl 2xl:mx-auto ">
-              <div className="w-[400px] hello-style">
-                <p className="text-lg md:text-4xl font-bold mb-3  ">
-                  Hello there!
-                </p>
-                <p className="text-lg md:text-3xl font-semibold">
-                  I am <span>Ezeugo Felistus Obieze</span>
-                </p>
-                <p className="text-base font-light italic text-gray-500">
-                  and I am a{" "}
-                  <span className="text-lg ml-1 text-gray-300">
-                    Front-End Developer
-                  </span>
-                </p>
-              </div>
-              <div className="">
-                <img src="/anim.svg" alt="my anim" />
-              </div>
+          <Suspense fallback={<div>loading</div>}>
+            <div>
+              <SideMenu />
             </div>
-          </div>
+          </Suspense>
+          <Suspense fallback={<div>loading</div>}>
+            <div className="h-screen flex-1 w-screen px-12 overflow-auto">
+              <Intro />
+              <About />
+            </div>
+          </Suspense>
         </section>
       </main>
     </div>
