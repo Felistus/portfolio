@@ -22,7 +22,8 @@ a {
 .hello-style {
   font-family: "Bree Serif", serif;
 }
-.about-font {
+.about-font,
+.experience {
   font-family: "Pridi", serif;
 }
 .header-font {
@@ -33,7 +34,9 @@ a {
 .card-body-font {
   font-family: "Pridi", serif;
 }
-
+li {
+  list-style-type: "✔ ";
+}
 /* 
 font-family: 'Bree Serif', serif;
 font-family: 'Creepster', cursive;

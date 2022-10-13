@@ -1,13 +1,42 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 const SideMenu = React.lazy(() => import("../components/SideMenu"));
 const About = React.lazy(() => import("../components/About"));
 const Intro = React.lazy(() => import("../components/Intro"));
 const Service = React.lazy(() => import("../components/Service"));
+const Akumzy = React.lazy(() => import("../components/Akumzy"));
+const Jaratechnology = React.lazy(() => import("../components/Jaratechnology"));
+const VisionVoice = React.lazy(() => import("../components/VisionVoice"));
 
 export default function Home() {
+  const [active, setActive] = useState(1);
+  const [value, setValue] = useState();
+
+  function change(e) {
+    if (e.target.textContent === "Vision Voice INC.") setActive(1);
+    else if (e.target.textContent === "Jarotechnologies") setActive(2);
+    else if (e.target.textContent === "Akumzy Lab") setActive(3);
+  }
+
+  useEffect(() => {
+    switch (active) {
+      case 1:
+        setValue(<VisionVoice />);
+        break;
+      case 2:
+        setValue(<Jaratechnology />);
+        break;
+      case 3:
+        setValue(<Akumzy />);
+        break;
+
+      default:
+        break;
+    }
+  }, [active]);
+
   return (
     <div>
       <Head>
@@ -39,6 +68,43 @@ export default function Home() {
               <Intro />
               <About />
               <Service />
+              <div className="my-20 w-full 2xl:max-w-7xl 2xl:mx-auto ">
+                <div>
+                  <p className="header-font text-gray-300">Experience</p>
+                </div>
+                <div className="flex experience ">
+                  <div className="">
+                    <div
+                      onClick={(e) => change(e)}
+                      className={
+                        `${active === 1 ? " bg-[#383838] " : "  "}` +
+                        "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer"
+                      }
+                    >
+                      Vision Voice INC.
+                    </div>
+                    <div
+                      onClick={(e) => change(e)}
+                      className={
+                        `${active === 2 ? " bg-[#383838] " : ""}` +
+                        "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer"
+                      }
+                    >
+                      Jarotechnologies
+                    </div>
+                    <div
+                      onClick={(e) => change(e)}
+                      className={
+                        `${active === 3 ? " bg-[#383838] " : ""}` +
+                        "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer"
+                      }
+                    >
+                      Akumzy Lab
+                    </div>
+                  </div>
+                  <div className="flex-1  h-auto rounded-r-2xl">{value}</div>
+                </div>
+              </div>
             </div>
           </Suspense>
         </section>
