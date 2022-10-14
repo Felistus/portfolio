@@ -70,7 +70,7 @@ export default function Home() {
               <Service />
               <div className="my-20 w-full 2xl:max-w-7xl 2xl:mx-auto ">
                 <div>
-                  <p className="header-font text-gray-300">Experience</p>
+                  <p className="header-font text-gray-300 ">Experience</p>
                 </div>
                 <div className="flex experience ">
                   <div className="">

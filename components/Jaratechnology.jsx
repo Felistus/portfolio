@@ -1,6 +1,6 @@
 export default function Jaratechnology() {
   return (
-    <div className="bg-[#383838] w-full py-5 px-20 rounded-2xl ">
+    <div className="bg-[#383838] w-full py-5 px-20 rounded-2xl h-[240px] overflow-y-auto ">
       <p className="text-3xl font-bold ">Front-End Developer</p>
       <p className="text-xl font-medium my-4">May 2022 - Present</p>
       <ul className="leading-6 text-base pl-5 ">
