@@ -6,7 +6,7 @@ export default function Service() {
   const serviceItems = services.map((item) => (
     <div
       key={item.id}
-      className="rounded-lg text-center border-2 py-8 px-5 w-[359px] hover:bg-gray-200 hover:text-[#322AAD] "
+      className="rounded-lg text-center border-2 py-8 px-5 w-[359px] service-anim "
     >
       <div className="w-20 h-20 mx-auto">
         <img

@@ -10,6 +10,7 @@ const Service = React.lazy(() => import("../components/Service"));
 const Akumzy = React.lazy(() => import("../components/Akumzy"));
 const Jaratechnology = React.lazy(() => import("../components/Jaratechnology"));
 const VisionVoice = React.lazy(() => import("../components/VisionVoice"));
+const RecentProject = React.lazy(() => import("../components/RecentProject"));
 
 export default function Home() {
   const [active, setActive] = useState(1);
@@ -87,7 +88,7 @@ export default function Home() {
                       onClick={(e) => change(e)}
                       className={
                         `${active === 1 ? " bg-[#383838] " : "  "}` +
-                        "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer"
+                        "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer trans"
                       }
                     >
                       inmotion ICT HUB
@@ -96,7 +97,7 @@ export default function Home() {
                       onClick={(e) => change(e)}
                       className={
                         `${active === 2 ? " bg-[#383838] " : "  "}` +
-                        "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer"
+                        "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer trans"
                       }
                     >
                       Vision Voice INC.
@@ -105,7 +106,7 @@ export default function Home() {
                       onClick={(e) => change(e)}
                       className={
                         `${active === 3 ? " bg-[#383838] " : ""}` +
-                        "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer"
+                        "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer trans"
                       }
                     >
                       Jarotechnologies
@@ -114,7 +115,7 @@ export default function Home() {
                       onClick={(e) => change(e)}
                       className={
                         `${active === 4 ? " bg-[#383838] " : ""}` +
-                        "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer"
+                        "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer trans"
                       }
                     >
                       Akumzy Lab
@@ -123,6 +124,7 @@ export default function Home() {
                   <div className="flex-1  h-auto rounded-r-2xl">{value}</div>
                 </div>
               </div>
+              <RecentProject />
             </div>
           </Suspense>
         </section>
