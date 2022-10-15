@@ -4,6 +4,7 @@ import Head from "next/head";
 import React, { Suspense, useEffect, useState } from "react";
 const SideMenu = React.lazy(() => import("../components/SideMenu"));
 const About = React.lazy(() => import("../components/About"));
+const Inmotion = React.lazy(() => import("../components/Inmotion"));
 const Intro = React.lazy(() => import("../components/Intro"));
 const Service = React.lazy(() => import("../components/Service"));
 const Akumzy = React.lazy(() => import("../components/Akumzy"));
@@ -15,20 +16,24 @@ export default function Home() {
   const [value, setValue] = useState();
 
   function change(e) {
-    if (e.target.textContent === "Vision Voice INC.") setActive(1);
-    else if (e.target.textContent === "Jarotechnologies") setActive(2);
-    else if (e.target.textContent === "Akumzy Lab") setActive(3);
+    if (e.target.textContent === "inmotion ICT HUB") setActive(1);
+    else if (e.target.textContent === "Vision Voice INC.") setActive(2);
+    else if (e.target.textContent === "Jarotechnologies") setActive(3);
+    else if (e.target.textContent === "Akumzy Lab") setActive(4);
   }
 
   useEffect(() => {
     switch (active) {
       case 1:
-        setValue(<VisionVoice />);
+        setValue(<Inmotion />);
         break;
       case 2:
-        setValue(<Jaratechnology />);
+        setValue(<VisionVoice />);
         break;
       case 3:
+        setValue(<Jaratechnology />);
+        break;
+      case 4:
         setValue(<Akumzy />);
         break;
 
@@ -58,13 +63,17 @@ export default function Home() {
 
       <main className="bg-[#181A1B]">
         <section className="flex">
-          <Suspense fallback={<div>loading</div>}>
+          <Suspense
+            fallback={
+              <div className="flex items-center justify-center animate-pulse h-screen w-screen ">
+                Jarotechnologies
+              </div>
+            }
+          >
             <div>
               <SideMenu />
             </div>
-          </Suspense>
-          <Suspense fallback={<div>loading</div>}>
-            <div className="h-screen flex-1 w-screen px-12 overflow-auto">
+            <div className="h-screen flex-1 w-screen px-12 overflow-auto ">
               <Intro />
               <About />
               <Service />
@@ -81,12 +90,21 @@ export default function Home() {
                         "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer"
                       }
                     >
+                      inmotion ICT HUB
+                    </div>
+                    <div
+                      onClick={(e) => change(e)}
+                      className={
+                        `${active === 2 ? " bg-[#383838] " : "  "}` +
+                        "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer"
+                      }
+                    >
                       Vision Voice INC.
                     </div>
                     <div
                       onClick={(e) => change(e)}
                       className={
-                        `${active === 2 ? " bg-[#383838] " : ""}` +
+                        `${active === 3 ? " bg-[#383838] " : ""}` +
                         "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer"
                       }
                     >
@@ -95,7 +113,7 @@ export default function Home() {
                     <div
                       onClick={(e) => change(e)}
                       className={
-                        `${active === 3 ? " bg-[#383838] " : ""}` +
+                        `${active === 4 ? " bg-[#383838] " : ""}` +
                         "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer"
                       }
                     >

@@ -37,12 +37,14 @@ a {
 li {
   list-style-type: "✔ ";
 }
-/* 
-font-family: 'Bree Serif', serif;
-font-family: 'Creepster', cursive;
-font-family: 'Monoton', cursive;
-font-family: 'Pridi', serif;
-font-family: 'Tangerine', cursive; */
+.customScrollBar::-webkit-scrollbar {
+  width: 20px;
+}
+.customScrollBar::-webkit-scrollbar-thumb {
+  background: #504e4e;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
