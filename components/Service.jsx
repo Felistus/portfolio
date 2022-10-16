@@ -18,7 +18,7 @@ export default function Service() {
       <p className="text-[22px] my-3 font-bold card-body-font  ">
         {item.title}
       </p>
-      <p className="text-base card-body-font font-light text-gray-500 ">
+      <p className="text-base card-body-font font-light text-gray-200 ">
         {item.description}
       </p>
     </div>

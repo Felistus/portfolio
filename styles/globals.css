@@ -65,10 +65,8 @@ li {
 
 .project {
   position: relative;
-  box-shadow: 0 40px 60px -6px black;
+  box-shadow: 0 30px 30px -6px black;
 
-  -webkit-box-reflect: below 2px
-    linear-gradient(transparent, transparent, #0004);
   transform-origin: center;
   transform: perspective(800px) rotateY(20deg);
   transition: 0.5s;
@@ -86,27 +84,26 @@ li {
 .card-desc {
   display: flex;
   width: 100%;
-  height: 100%;
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
   position: absolute;
+  bottom: 0;
   height: 0;
-  top: 0;
   opacity: 0;
   padding: 18px 8%;
   background-color: #e9f1e9;
   transition: 0.8s ease;
-  color: black;
 }
 .project:hover .card-desc {
   opacity: 1;
-  height: 100%;
+  height: 60%;
 }
 .project:hover {
   transform: perspective(800px) rotateY(0deg);
   opacity: 1;
 }
+
 /* end of animation */
 
 @media (prefers-color-scheme: dark) {

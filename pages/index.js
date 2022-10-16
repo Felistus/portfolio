@@ -2,10 +2,10 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import React, { Suspense, useEffect, useState } from "react";
-const SideMenu = React.lazy(() => import("../components/SideMenu"));
-const About = React.lazy(() => import("../components/About"));
+import SideMenu from "../components/SideMenu";
+import Intro from "../components/Intro";
 const Inmotion = React.lazy(() => import("../components/Inmotion"));
-const Intro = React.lazy(() => import("../components/Intro"));
+const About = React.lazy(() => import("../components/About"));
 const Service = React.lazy(() => import("../components/Service"));
 const Akumzy = React.lazy(() => import("../components/Akumzy"));
 const Jaratechnology = React.lazy(() => import("../components/Jaratechnology"));
@@ -64,69 +64,67 @@ export default function Home() {
 
       <main className="bg-[#181A1B]">
         <section className="flex">
-          <Suspense
-            fallback={
-              <div className="flex items-center justify-center animate-pulse h-screen w-screen ">
-                Jarotechnologies
-              </div>
-            }
-          >
-            <div>
-              <SideMenu />
-            </div>
-            <div className="h-screen flex-1 w-screen px-12 overflow-auto ">
-              <Intro />
+          <div>
+            <SideMenu />
+          </div>
+          <div className="h-screen flex-1 w-screen px-12 overflow-auto ">
+            <Intro />
+            <Suspense fallback={<Intro />}>
               <About />
+            </Suspense>
+            <Suspense fallback={<About />}>
               <Service />
-              <div className="my-20 w-full 2xl:max-w-7xl 2xl:mx-auto ">
-                <div>
-                  <p className="header-font text-gray-300 ">Experience</p>
-                </div>
-                <div className="flex experience ">
-                  <div className="">
-                    <div
-                      onClick={(e) => change(e)}
-                      className={
-                        `${active === 1 ? " bg-[#383838] " : "  "}` +
-                        "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer trans"
-                      }
-                    >
-                      inmotion ICT HUB
-                    </div>
-                    <div
-                      onClick={(e) => change(e)}
-                      className={
-                        `${active === 2 ? " bg-[#383838] " : "  "}` +
-                        "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer trans"
-                      }
-                    >
-                      Vision Voice INC.
-                    </div>
-                    <div
-                      onClick={(e) => change(e)}
-                      className={
-                        `${active === 3 ? " bg-[#383838] " : ""}` +
-                        "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer trans"
-                      }
-                    >
-                      Jarotechnologies
-                    </div>
-                    <div
-                      onClick={(e) => change(e)}
-                      className={
-                        `${active === 4 ? " bg-[#383838] " : ""}` +
-                        "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer trans"
-                      }
-                    >
-                      Akumzy Lab
-                    </div>
+            </Suspense>
+            <div className="my-20 w-full 2xl:max-w-7xl 2xl:mx-auto ">
+              <div>
+                <p className="header-font text-gray-300 ">Experience</p>
+              </div>
+              <div className="flex experience ">
+                <div className="">
+                  <div
+                    onClick={(e) => change(e)}
+                    className={
+                      `${active === 1 ? " bg-[#383838] " : "  "}` +
+                      "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer trans"
+                    }
+                  >
+                    inmotion ICT HUB
                   </div>
-                  <div className="flex-1  h-auto rounded-r-2xl">{value}</div>
+                  <div
+                    onClick={(e) => change(e)}
+                    className={
+                      `${active === 2 ? " bg-[#383838] " : "  "}` +
+                      "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer trans"
+                    }
+                  >
+                    Vision Voice INC.
+                  </div>
+                  <div
+                    onClick={(e) => change(e)}
+                    className={
+                      `${active === 3 ? " bg-[#383838] " : ""}` +
+                      "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer trans"
+                    }
+                  >
+                    Jarotechnologies
+                  </div>
+                  <div
+                    onClick={(e) => change(e)}
+                    className={
+                      `${active === 4 ? " bg-[#383838] " : ""}` +
+                      "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer trans"
+                    }
+                  >
+                    Akumzy Lab
+                  </div>
+                </div>
+                <div className="flex-1  h-auto rounded-r-2xl">
+                  <Suspense fallback={<Inmotion />}>{value}</Suspense>
                 </div>
               </div>
-              <RecentProject />
             </div>
-          </Suspense>
+            <RecentProject />
+          </div>
         </section>
       </main>
     </div>
