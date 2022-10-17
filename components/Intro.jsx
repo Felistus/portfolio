@@ -1,7 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 export default function Intro() {
   return (
-    <div className="h-screen w-full flex items-center justify-between 2xl:max-w-7xl 2xl:mx-auto ">
+    <div
+      className="h-screen w-full flex items-center justify-between 2xl:max-w-7xl 2xl:mx-auto  "
+      id="home"
+    >
       <div className="w-[400px] hello-style">
         <p className="text-lg md:text-4xl font-bold mb-3  ">Hello there!</p>
         <p className="text-lg md:text-3xl font-semibold">

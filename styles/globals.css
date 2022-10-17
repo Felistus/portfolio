@@ -23,7 +23,8 @@ a {
   font-family: "Bree Serif", serif;
 }
 .about-font,
-.experience {
+.experience,
+.projects {
   font-family: "Pridi", serif;
 }
 .header-font {
@@ -37,12 +38,75 @@ a {
 li {
   list-style-type: "✔ ";
 }
-/* 
-font-family: 'Bree Serif', serif;
-font-family: 'Creepster', cursive;
-font-family: 'Monoton', cursive;
-font-family: 'Pridi', serif;
-font-family: 'Tangerine', cursive; */
+.customScrollBar::-webkit-scrollbar {
+  width: 20px;
+}
+.customScrollBar::-webkit-scrollbar-thumb {
+  background: #504e4e;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+
+/* animations */
+.service-anim {
+  position: relative;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  transition: 0.5s;
+}
+.service-anim:hover {
+  transform: translateY(-30px);
+}
+.trans {
+  transition: 0.5s;
+}
+
+.project {
+  position: relative;
+  box-shadow: 0 30px 30px -6px black;
+
+  transform-origin: center;
+  transform: perspective(800px) rotateY(20deg);
+  transition: 0.5s;
+}
+.card-title {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background-color: #d3ae4e;
+  padding: 2%;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.card-desc {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  opacity: 0;
+  padding: 18px 8%;
+  background-color: #fff;
+  transition: 0.8s ease;
+}
+.project:hover .card-desc {
+  opacity: 1;
+  height: 60%;
+}
+.project:hover {
+  transform: perspective(800px) rotateY(0deg);
+  opacity: 1;
+}
+.scroll-trans {
+  transition: 0.8s ease;
+}
+/* end of animation */
 
 @media (prefers-color-scheme: dark) {
   html {

@@ -1,6 +1,6 @@
 export default function VisionVoice() {
   return (
-    <div className="w-full py-5 px-20 rounded-r-2xl bg-[#383838] h-[240px] overflow-y-auto ">
+    <div className="w-full py-5 px-20 rounded-2xl bg-[#383838] h-[240px] overflow-y-auto customScrollBar ">
       <p className="text-3xl font-bold ">Tech Lead (Volunteer)</p>
       <p className="text-xl font-medium my-4">July 2022 - September 2022</p>
       <ul className="leading-6 text-base pl-5 ">

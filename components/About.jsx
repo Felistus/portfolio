@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 export default function About() {
   return (
-    <div className="w-full 2xl:max-w-7xl 2xl:mx-auto">
+    <div className="w-full 2xl:max-w-7xl 2xl:mx-auto  ">
       <div>
         <p className="header-font text-gray-300">About Me</p>
       </div>
