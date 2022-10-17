@@ -24,7 +24,7 @@ export default function Service() {
     </div>
   ));
   return (
-    <div className="my-20 w-full 2xl:max-w-7xl 2xl:mx-auto ">
+    <div className="w-full 2xl:max-w-7xl 2xl:mx-auto ">
       <div>
         <p className="header-font text-gray-300">Services</p>
       </div>

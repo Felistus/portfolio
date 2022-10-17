@@ -92,7 +92,7 @@ li {
   height: 0;
   opacity: 0;
   padding: 18px 8%;
-  background-color: #e9f1e9;
+  background-color: #fff;
   transition: 0.8s ease;
 }
 .project:hover .card-desc {
@@ -103,7 +103,9 @@ li {
   transform: perspective(800px) rotateY(0deg);
   opacity: 1;
 }
-
+.scroll-trans {
+  transition: 0.8s ease;
+}
 /* end of animation */
 
 @media (prefers-color-scheme: dark) {
