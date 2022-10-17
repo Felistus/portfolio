@@ -28,7 +28,7 @@ export default function RecentProject() {
   }, [active]);
 
   return (
-    <div className="w-full 2xl:max-w-7xl 2xl:mx-auto ">
+    <div className="w-full xl:max-w-7xl xl:mx-auto ">
       <div>
         <p className="header-font text-gray-300">Projects</p>
       </div>

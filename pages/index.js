@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import SideMenu from "../components/SideMenu";
 import Intro from "../components/Intro";
 const About = React.lazy(() => import("../components/About"));
@@ -10,6 +10,7 @@ const Service = React.lazy(() => import("../components/Service"));
 const RecentProject = React.lazy(() => import("../components/RecentProject"));
 
 export default function Home() {
+  const text = useState();
   return (
     <div>
       <Head>
@@ -29,32 +30,33 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-[#181A1B]">
+      <main className="bg-[#181A1B] ">
         <section className="flex">
-          <div>
-            <SideMenu />
-          </div>
+          <div>{/* <SideMenu /> */}</div>
           <div className="h-screen flex-1 w-screen overflow-auto  ">
-            <section id="home" className="px-12 ">
+            <section id="home" className="px-6 md:px-12 ">
               <Intro />
             </section>
             <Suspense fallback={<Intro />}>
-              <section id="about" className="mt-20 py-10 px-12 w-full">
+              <section id="about" className="px-6 md:px-12 w-full">
                 <About />
               </section>
             </Suspense>
             <Suspense fallback={<About />}>
-              <section className="px-12 w-full py-10 my-20 " id="service">
+              <section
+                className="px-6 md:px-12 w-full py-10 my-20 "
+                id="service"
+              >
                 <Service />
               </section>
             </Suspense>
             <Suspense fallback={<Service />}>
-              <section id="experience" className="px-12 w-full">
+              <section id="experience" className="px-6 md:px-12 w-full">
                 <Experience />
               </section>
             </Suspense>
             <Suspense fallback={<Experience />}>
-              <section id="project" className="my-20 px-12 py-10">
+              <section id="project" className="px-6 my-20 md:px-12 py-10">
                 <RecentProject />
               </section>
             </Suspense>

@@ -1,16 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 export default function About() {
   return (
-    <div className="w-full 2xl:max-w-7xl 2xl:mx-auto  ">
+    <div className="w-full xl:max-w-7xl xl:mx-auto   ">
       <div>
         <p className="header-font text-gray-300">About Me</p>
       </div>
-      <div className="flex space-x-20 leading-6">
-        <div className="w-64 h-64 rounded-full hover:border-2 ">
+      <div className="xl:flex xl:space-x-20 leading-6  ">
+        <div className="w-60 h-60 rounded-full hover:border-2 mx-auto xl:mx-0 mb-5 ">
           <img src="/avatar.svg" alt="my avatar" />
         </div>
         <div className="bg-[#383838] flex-1 rounded-xl p-5">
-          <div className="text-lg about-font">
+          <div className="text-base about-font">
             <p className="">
               My name is Ezeugo Felistus Obieze, and I am based in Port
               Harcourt, Nigeria. I studied at Federal University of Technology
@@ -23,10 +23,9 @@ export default function About() {
               diving into Mobile Development someday. I am committed at what I
               do and I love learning new technologies.
             </p>
-            <p>Some of my Skills include:</p>
-            <div className="flex items-center space-x-20 text-base">
+            <div className="md:flex items-center md:space-x-20 space-y-3 md:space-y-0 text-base">
               <dl>
-                <dt className="font-bold">Soft Skills</dt>
+                <dt className="font-medium">Soft Skills</dt>
                 <dd>✔ Ability to collaborate </dd>
                 <dd>✔ Good communication</dd>
                 <dd>✔ Good time management</dd>
@@ -35,7 +34,7 @@ export default function About() {
               </dl>
 
               <dl>
-                <dt className="font-bold">Technical Skills</dt>
+                <dt className="font-medium">Technical Skills</dt>
                 <dd>🛠 JavaScript</dd>
                 <dd>🛠 TypeScript</dd>
                 <dd>🛠 C Language (Basic)</dd>

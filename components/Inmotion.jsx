@@ -1,9 +1,9 @@
 export default function Inmotion() {
   return (
-    <div className="bg-[#383838] w-full py-5 px-20 rounded-r-2xl h-[240px] overflow-y-auto customScrollBar ">
+    <div className="bg-[#383838] w-full px-3 py-5 md:px-10 rounded-2xl xl:rounded-l-none xl:rounded-r-2xl h-auto xl:h-[240px] overflow-y-auto customScrollBar ">
       <p className="text-3xl font-bold ">Front-End Developer</p>
       <p className="text-xl font-medium my-4">October 2022 - Present</p>
-      <ul className="leading-6 text-base pl-5 ">
+      <ul className="leading-6 text-base pl-5 space-y-2 ">
         <li>
           Develop and implement highly responsive user interface components
           using React.js.

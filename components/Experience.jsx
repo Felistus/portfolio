@@ -29,17 +29,21 @@ export default function Experience() {
     }
   }, [active]);
   return (
-    <div className="w-full 2xl:max-w-7xl 2xl:mx-auto ">
+    <div className="w-full xl:max-w-7xl xl:mx-auto ">
       <div>
         <p className="header-font text-gray-300 ">Experience</p>
       </div>
-      <div className="flex experience ">
-        <div className="">
+      <div className="lg:flex experience ">
+        <div className="mb-5 xl:mb-0 ">
           <div
             onClick={(e) => changeView(e, setActive)}
             className={
-              `${active === 1 ? " bg-[#383838] " : "  "}` +
-              "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer trans"
+              `${
+                active === 1
+                  ? " bg-none text-red-700 font-semibold  xl:text-white xl:bg-[#383838] "
+                  : "  "
+              }` +
+              "pr-24 text-xl font-medium py-2 xl:py-4 rounded-l-2xl xl:pl-5 cursor-pointer trans"
             }
           >
             inmotion ICT HUB
@@ -47,8 +51,12 @@ export default function Experience() {
           <div
             onClick={(e) => changeView(e, setActive)}
             className={
-              `${active === 2 ? " bg-[#383838] " : "  "}` +
-              "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer trans"
+              `${
+                active === 2
+                  ? " bg-none text-red-700 font-semibold  xl:text-white xl:bg-[#383838] "
+                  : "  "
+              }` +
+              "pr-24 text-xl font-medium py-2 xl:py-4 rounded-l-2xl xl:pl-5 cursor-pointer trans"
             }
           >
             Vision Voice INC.
@@ -56,8 +64,12 @@ export default function Experience() {
           <div
             onClick={(e) => changeView(e, setActive)}
             className={
-              `${active === 3 ? " bg-[#383838] " : ""}` +
-              "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer trans"
+              `${
+                active === 3
+                  ? " bg-none text-red-700 font-semibold  xl:text-white xl:bg-[#383838] "
+                  : ""
+              }` +
+              "pr-24 text-xl font-medium py-2 xl:py-4 rounded-l-2xl xl:pl-5 cursor-pointer trans"
             }
           >
             Jarotechnologies
@@ -65,14 +77,18 @@ export default function Experience() {
           <div
             onClick={(e) => changeView(e, setActive)}
             className={
-              `${active === 4 ? " bg-[#383838] " : ""}` +
-              "pr-24 text-xl font-medium py-4 rounded-l-2xl pl-5 cursor-pointer trans"
+              `${
+                active === 4
+                  ? " bg-none text-red-700 font-semibold  xl:text-white xl:bg-[#383838] "
+                  : ""
+              }` +
+              "pr-24 text-xl font-medium py-2 xl:py-4 rounded-l-2xl xl:pl-5 cursor-pointer trans"
             }
           >
             Akumzy Lab
           </div>
         </div>
-        <div className="flex-1  h-auto rounded-r-2xl">
+        <div className="flex-1 h-fit rounded-r-2xl">
           <Suspense fallback={<Inmotion />}>{value}</Suspense>
         </div>
       </div>
