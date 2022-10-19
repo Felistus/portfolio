@@ -18,6 +18,7 @@ a {
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .hello-style {
@@ -61,7 +62,7 @@ li {
   transform: translateY(-30px);
 }
 .trans {
-  transition: 0.5s;
+  transition: 0.8s ease-in-out;
 }
 
 .project {

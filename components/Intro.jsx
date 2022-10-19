@@ -4,13 +4,12 @@ import LinkedInIcon from "./icons/LinkedInIcon";
 /* eslint-disable @next/next/no-img-element */
 export default function Intro() {
   return (
-    <div
-      className="flex flex-col flex-col-reverse justify-center md:block h-screen w-full xl:flex xl:flex-row xl:justify-between xl:items-center xl:max-w-7xl xl:mx-auto relative md:mb-20 xl:mb-0   "
-      id="home"
-    >
-      <div className="w-[400px] hello-style md:h-auto md:relative md:top-[50px] xl:top-0">
-        <p className="text-lg md:text-4xl font-bold mb-3  ">Hello there!</p>
-        <p className="text-lg md:text-3xl font-semibold">
+    <div className="flex flex-col flex-col-reverse justify-center md:block h-screen w-full xl:flex xl:flex-row xl:justify-between xl:items-center xl:max-w-7xl xl:mx-auto relative md:mb-20 xl:mb-0   ">
+      <div className="md:w-[400px] w-full hello-style md:h-auto md:relative md:top-[50px] xl:top-0 ">
+        <p className="text-lg md:text-4xl font-bold mb-3 text-white  ">
+          Hello there!
+        </p>
+        <p className="text-lg md:text-3xl font-semibold text-white">
           I am <span>Ezeugo Felistus Obieze</span>
         </p>
         <p className="text-base font-light text-gray-500">

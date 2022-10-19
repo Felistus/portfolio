@@ -1,6 +1,6 @@
 export default function Akumzy() {
   return (
-    <div className="w-full px-3 py-5 md:px-10 rounded-2xl xl:rounded-l-none xl:rounded-r-2xl bg-[#383838] h-auto xl:h-[240px] overflow-y-auto customScrollBar  ">
+    <div className="trans w-full px-3 py-5 md:px-10 rounded-2xl xl:rounded-l-none xl:rounded-r-2xl bg-[#383838] h-auto xl:h-[240px] overflow-y-auto customScrollBar  ">
       <p className="text-xl font-bold ">Front-End Developer</p>
       <p className="text-lg font-medium my-4">December 2021 - May 2022</p>
       <ul className="leading-6 text-base pl-5 space-y-2 ">

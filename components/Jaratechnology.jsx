@@ -1,6 +1,6 @@
 export default function Jaratechnology() {
   return (
-    <div className="bg-[#383838] w-full px-3 py-5 md:px-10 rounded-2xl h-auto xl:h-[240px] overflow-y-auto customScrollBar ">
+    <div className="trans bg-[#383838] w-full px-3 py-5 md:px-10 rounded-2xl h-auto xl:h-[240px] overflow-y-auto customScrollBar ">
       <p className="text-xl font-bold ">Front-End Developer</p>
       <p className="text-lg font-medium my-4">June 2022 - October 2022</p>
       <ul className="leading-6 text-base pl-5 space-y-2 ">

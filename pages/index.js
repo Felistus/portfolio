@@ -30,11 +30,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-[#181A1B] ">
-        <section className="flex">
-          <div>{/* <SideMenu /> */}</div>
+      <main className="bg-[#181A1B]  ">
+        <section className="flex ">
+          <div>
+            <SideMenu />
+          </div>
           <div className="h-screen flex-1 w-screen overflow-auto  ">
-            <section id="home" className="px-6 md:px-12 ">
+            <section id="home" className="px-6 md:px-12 w-full  ">
               <Intro />
             </section>
             <Suspense fallback={<Intro />}>

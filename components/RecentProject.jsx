@@ -33,7 +33,7 @@ export default function RecentProject() {
         <p className="header-font text-gray-300">Projects</p>
       </div>
       <div>
-        <div className="flex space-x-10 font-medium text-xl projects  ">
+        <div className="flex space-x-10 font-medium text-xl projects overflow-y-hidden overflow-x-auto  ">
           <p
             onClick={(e) => changeView(e, setActive)}
             className={
