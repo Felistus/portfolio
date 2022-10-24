@@ -2,6 +2,7 @@ import LinkIcon from "./icons/LinkIcon";
 import GithubIcon from "./icons/GithubIcon";
 import BitbucketIcon from "./icons/BitbucketIcon";
 
+/* eslint-disable @next/next/no-img-element */
 export default function ProjectCard({ project }) {
   return (
     <div className="rounded-lg text-center max-w-[350px] project overflow-hidden">
