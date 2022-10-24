@@ -1,10 +1,4 @@
 import styles from "../styles/Home.module.css";
-import HomeIcon from "./icons/HomeIcon";
-import AboutIcon from "./icons/AboutIcon";
-import ServiceIcon from "./icons/ServiceIcon";
-import WorkIcon from "./icons/WorkIcon";
-import ProjectsIcon from "./icons/ProjectsIcon";
-import ContactIcon from "./icons/ContactIcon";
 import ResumeIcon from "./icons/ResumeIcon";
 import Link from "next/link";
 import { sideBarIcons } from "../data/sideBarIcons";
@@ -24,8 +18,10 @@ export default function SideMenu() {
         ))}
       </div>
 
-      <div className="hover:text-[#D3AE4E] cursor-pointer ">
-        <ResumeIcon />
+      <div className="text-red-800 cursor-pointer " title="Download my Resume">
+        <a href="/Ezeugo_Obieze.pdf" download="Ezeugo Felistus Obieze">
+          <ResumeIcon />
+        </a>
       </div>
     </div>
   );

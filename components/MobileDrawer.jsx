@@ -31,6 +31,7 @@ export default function MobileDrawer({ show, setShow }) {
         <div className="flex flex-col my-8 flex-1 space-y-10 justify-center">
           {sideBarIcons.map((icon) => (
             <div
+              onClick={() => setShow((prev) => !prev)}
               key={icon.id}
               className="hover:text-[#D3AE4E] cursor-pointer  "
             >

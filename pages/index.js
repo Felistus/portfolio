@@ -51,10 +51,7 @@ export default function Home() {
           <div>
             <MobileDrawer show={show} setShow={setShow} />
           </div>
-          <div
-            onClick={() => setShow((prev) => !prev)}
-            className="h-screen flex-1 w-screen overflow-auto  "
-          >
+          <div className="h-screen flex-1 w-screen overflow-auto  ">
             <section id="home" className="px-6 md:px-12 w-full  ">
               <Intro />
             </section>
