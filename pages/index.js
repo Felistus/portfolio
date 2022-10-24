@@ -1,16 +1,23 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
+import MenufoldIcon from "../components/icons/MenufoldIcon";
 import SideMenu from "../components/SideMenu";
 import Intro from "../components/Intro";
+import MobileDrawer from "../components/MobileDrawer";
 const About = React.lazy(() => import("../components/About"));
+const Contact = React.lazy(() => import("../components/Contact"));
 const Experience = React.lazy(() => import("../components/Experience"));
 const Service = React.lazy(() => import("../components/Service"));
 const RecentProject = React.lazy(() => import("../components/RecentProject"));
 
 export default function Home() {
-  const text = useState();
+  const [show, setShow] = useState(false);
+
+  function showSideBar() {
+    setShow((prev) => !prev);
+  }
   return (
     <div>
       <Head>
@@ -31,11 +38,23 @@ export default function Home() {
       </Head>
 
       <main className="bg-[#181A1B]  ">
-        <section className="flex ">
-          <div>
+        <section className="flex  ">
+          <div
+            onClick={showSideBar}
+            className="lg:hidden z-10 bg-[#181A1B] absolute top-3 hover:border-[#D3AE4E] border-[1px] border-gray-400 p-1 rounded-xl cursor-pointer left-3 hover:text-[#D3AE4E]"
+          >
+            <MenufoldIcon />
+          </div>
+          <div className="hidden lg:block z-10">
             <SideMenu />
           </div>
-          <div className="h-screen flex-1 w-screen overflow-auto  ">
+          <div>
+            <MobileDrawer show={show} setShow={setShow} />
+          </div>
+          <div
+            onClick={() => setShow((prev) => !prev)}
+            className="h-screen flex-1 w-screen overflow-auto  "
+          >
             <section id="home" className="px-6 md:px-12 w-full  ">
               <Intro />
             </section>
@@ -60,6 +79,11 @@ export default function Home() {
             <Suspense fallback={<Experience />}>
               <section id="project" className="px-6 my-20 md:px-12 py-10">
                 <RecentProject />
+              </section>
+            </Suspense>
+            <Suspense fallback={<RecentProject />}>
+              <section id="contact" className="px-6 my-20 md:px-12 py-10">
+                <Contact />
               </section>
             </Suspense>
           </div>

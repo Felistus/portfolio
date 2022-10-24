@@ -108,6 +108,28 @@ li {
 .scroll-trans {
   transition: 0.8s ease;
 }
+
+/* mobile drawer */
+.fly {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate3d(-100vw, 0, 0);
+  transition: transform 8s cubic-bezier(0, 0.52, 0, 1);
+  z-index: 10;
+}
+.fly-show {
+  height: 100vh;
+  background-color: #181a1b;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate3d(0vw, 0, 0);
+  transition: transform 0.8s cubic-bezier(0, 0.52, 0, 1);
+  z-index: 10;
+}
+
 /* end of animation */
 @media (prefers-color-scheme: dark) {
   html {

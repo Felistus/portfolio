@@ -7,6 +7,7 @@ import ProjectsIcon from "./icons/ProjectsIcon";
 import ContactIcon from "./icons/ContactIcon";
 import ResumeIcon from "./icons/ResumeIcon";
 import Link from "next/link";
+import { sideBarIcons } from "../data/sideBarIcons";
 
 export default function SideMenu() {
   return (
@@ -16,34 +17,11 @@ export default function SideMenu() {
       </div>
 
       <div className="flex flex-col my-8 flex-1 space-y-10 justify-center">
-        <div className="hover:text-[#D3AE4E] cursor-pointer  ">
-          <a href="#home">
-            <HomeIcon />
-          </a>
-        </div>
-        <div className="hover:text-[#D3AE4E] cursor-pointer ">
-          <a href="#about">
-            <AboutIcon />
-          </a>
-        </div>
-        <div className="hover:text-[#D3AE4E] cursor-pointer ">
-          <a href="#service">
-            <ServiceIcon />
-          </a>
-        </div>
-        <div className="hover:text-[#D3AE4E] cursor-pointer ">
-          <a href="#experience">
-            <WorkIcon />
-          </a>
-        </div>
-        <div className="hover:text-[#D3AE4E] cursor-pointer ">
-          <a href="#project">
-            <ProjectsIcon />
-          </a>
-        </div>
-        <div className="hover:text-[#D3AE4E] cursor-pointer ">
-          <ContactIcon />
-        </div>
+        {sideBarIcons.map((icon) => (
+          <div key={icon.id} className="hover:text-[#D3AE4E] cursor-pointer  ">
+            <a href={icon.link}>{icon.icon}</a>
+          </div>
+        ))}
       </div>
 
       <div className="hover:text-[#D3AE4E] cursor-pointer ">
