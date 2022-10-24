@@ -12,13 +12,20 @@ export default function SideMenu() {
 
       <div className="flex flex-col my-8 flex-1 space-y-10 justify-center">
         {sideBarIcons.map((icon) => (
-          <div key={icon.id} className="hover:text-[#D3AE4E] cursor-pointer  ">
+          <div
+            key={icon.id}
+            className="hover:text-[#D3AE4E] text-white cursor-pointer  "
+            title={icon.title}
+          >
             <a href={icon.link}>{icon.icon}</a>
           </div>
         ))}
       </div>
 
-      <div className="text-red-800 cursor-pointer " title="Download my Resume">
+      <div
+        className="text-red-500 cursor-pointer animate-pulse "
+        title="download my Resume "
+      >
         <a href="/Ezeugo_Obieze.pdf" download="Ezeugo Felistus Obieze">
           <ResumeIcon />
         </a>

@@ -13,7 +13,7 @@ export default function Contact() {
         <div className="block lg:flex lg:space-x-10 space-y-10 lg:space-y-0 font-medium text-xl overflow-y-hidden overflow-x-auto  ">
           <div className="text-white font-light w-full max-w-[400px] ">
             <p className="text-2xl projects">
-              Interested! Let us have a discussion.
+              Interested! Let{"'"}s have a discussion.
             </p>
             <p className="text-base font-medium">
               Send me an E-mail using the form 👉

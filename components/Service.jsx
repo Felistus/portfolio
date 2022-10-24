@@ -16,7 +16,7 @@ export default function Service() {
           className="w-full h-full"
         />
       </div>
-      <p className="text-[22px] my-3 font-bold card-body-font  ">
+      <p className="text-[22px] text-white my-3 font-bold card-body-font  ">
         {item.title}
       </p>
       <p className="text-base card-body-font font-light text-gray-200 ">

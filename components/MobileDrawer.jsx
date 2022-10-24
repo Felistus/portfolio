@@ -19,7 +19,7 @@ export default function MobileDrawer({ show, setShow }) {
     <div className={`${show ? " fly-show " : " fly "}`}>
       <div
         onClick={hideSideBar}
-        className="z-10 bg-[#181A1B] absolute top-3 hover:border-[#D3AE4E] border-[1px] border-gray-400 p-1 rounded-xl cursor-pointer left-10 hover:text-[#D3AE4E]"
+        className="z-10 bg-[#181A1B] text-white absolute top-3 hover:border-[#D3AE4E] border-[1px] border-gray-400 p-1 rounded-xl cursor-pointer left-10 hover:text-[#D3AE4E]"
       >
         <MenuUnfoldIcon />
       </div>
@@ -33,14 +33,20 @@ export default function MobileDrawer({ show, setShow }) {
             <div
               onClick={() => setShow((prev) => !prev)}
               key={icon.id}
-              className="hover:text-[#D3AE4E] cursor-pointer  "
+              className="hover:text-[#D3AE4E] text-white cursor-pointer  "
+              title={icon.title}
             >
               <a href={icon.link}>{icon.icon}</a>
             </div>
           ))}
         </div>
-        <div className="hover:text-[#D3AE4E] cursor-pointer ">
-          <ResumeIcon />
+        <div
+          className="text-red-500 cursor-pointer animate-pulse "
+          title="download my Resume "
+        >
+          <a href="/Ezeugo_Obieze.pdf" download="Ezeugo Felistus Obieze">
+            <ResumeIcon />
+          </a>
         </div>
       </div>
     </div>

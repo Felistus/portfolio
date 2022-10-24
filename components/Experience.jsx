@@ -33,7 +33,7 @@ export default function Experience() {
       <div>
         <p className="header-font text-gray-300 ">Experience</p>
       </div>
-      <div className="lg:flex experience ">
+      <div className="lg:flex experience text-white">
         <div className="mb-5 xl:mb-0 ">
           <div
             onClick={(e) => changeView(e, setActive)}

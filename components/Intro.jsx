@@ -19,7 +19,7 @@ export default function Intro() {
           </span>
         </p>
         <div className="flex space-x-3 my-3">
-          <div className="cursor-pointer hover:text-[#D3AE4E]">
+          <div className="cursor-pointer hover:text-[#D3AE4E] text-white">
             <a
               href="https://www.linkedin.com/in/ezeugo-felistus-obieze/"
               target="_blanck"
@@ -28,7 +28,7 @@ export default function Intro() {
               <LinkedInIcon />
             </a>
           </div>
-          <div className="cursor-pointer hover:text-[#D3AE4E]">
+          <div className="cursor-pointer hover:text-[#D3AE4E] text-white">
             <a
               href="https://github.com/Felistus"
               target="_blanck"

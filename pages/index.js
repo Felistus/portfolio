@@ -41,7 +41,7 @@ export default function Home() {
         <section className="flex  ">
           <div
             onClick={showSideBar}
-            className="lg:hidden z-10 bg-[#181A1B] absolute top-3 hover:border-[#D3AE4E] border-[1px] border-gray-400 p-1 rounded-xl cursor-pointer left-3 hover:text-[#D3AE4E]"
+            className="lg:hidden text-white z-10 bg-[#181A1B] absolute top-3 hover:border-[#D3AE4E] border-[1px] border-gray-400 p-1 rounded-xl cursor-pointer left-3 hover:text-[#D3AE4E]"
           >
             <MenufoldIcon />
           </div>

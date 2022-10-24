@@ -11,34 +11,36 @@ export const sideBarIcons = [
     id: 1,
     icon: <HomeIcon />,
     link: "#home",
+    title: "home",
   },
   {
     id: 2,
     icon: <AboutIcon />,
     link: "#about",
+    title: "about",
   },
   {
     id: 3,
     icon: <ServiceIcon />,
     link: "#service",
+    title: "services",
   },
   {
     id: 4,
     icon: <WorkIcon />,
     link: "#experience",
+    title: "work experience",
   },
   {
     id: 5,
     icon: <ProjectsIcon />,
     link: "#project",
+    title: "projects",
   },
   {
     id: 6,
     icon: <ContactIcon />,
     link: "#contact",
+    title: "contact me",
   },
-  //   {
-  //     id: 7,
-  //     icon: <ResumeIcon />,
-  //   },
 ];

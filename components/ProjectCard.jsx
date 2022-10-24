@@ -12,7 +12,7 @@ export default function ProjectCard({ project }) {
         alt="responsive web icon"
         className="w-full h-full "
       />
-      <div className="card-desc space-x-10 ">
+      <div className="card-desc space-x-10  ">
         <button
           className="bg-[#D3AE4E] w-12 h-12 flex justify-center items-center rounded-full"
           title="Live Site"
@@ -26,7 +26,7 @@ export default function ProjectCard({ project }) {
           </a>
         </button>
         <button
-          className="bg-[#D3AE4E] w-12 h-12 flex justify-center items-center rounded-full"
+          className="bg-[#D3AE4E] w-12 h-12 flex justify-center text-white items-center rounded-full"
           title={
             project.versioning_tool === "github"
               ? "GitHub Repo"

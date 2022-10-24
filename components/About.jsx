@@ -9,7 +9,7 @@ export default function About() {
         <div className="w-60 h-60 rounded-full hover:border-2 mx-auto xl:mx-0 mb-5 ">
           <img src="/avatar.svg" alt="my avatar" />
         </div>
-        <div className="bg-[#383838] flex-1 rounded-xl p-5">
+        <div className="bg-[#383838] text-white flex-1 rounded-xl p-5">
           <div className="text-base about-font">
             <p className="">
               My name is Ezeugo Felistus Obieze, and I am based in Port
