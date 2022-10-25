@@ -11,6 +11,8 @@ const Contact = React.lazy(() => import("../components/Contact"));
 const Experience = React.lazy(() => import("../components/Experience"));
 const Service = React.lazy(() => import("../components/Service"));
 const RecentProject = React.lazy(() => import("../components/RecentProject"));
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Home() {
   const [show, setShow] = useState(false);
@@ -86,6 +88,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <ToastContainer autoClose={3000} />
     </div>
   );
 }

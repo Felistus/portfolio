@@ -1,6 +1,7 @@
 import LinkIcon from "./icons/LinkIcon";
 import GithubIcon from "./icons/GithubIcon";
 import BitbucketIcon from "./icons/BitbucketIcon";
+import Image from "next/image";
 
 /* eslint-disable @next/next/no-img-element */
 export default function ProjectCard({ project }) {
@@ -12,6 +13,16 @@ export default function ProjectCard({ project }) {
         alt="responsive web icon"
         className="w-full h-full "
       />
+      {/* <div className="w-[350px] ">
+        <Image
+          src={project.image}
+          alt={project.title}
+          width="500"
+          height="360"
+          objectFit="fill"
+          // className="w-full"
+        />
+      </div> */}
       <div className="card-desc space-x-10  ">
         <button
           className="bg-[#D3AE4E] w-12 h-12 flex justify-center items-center rounded-full"
