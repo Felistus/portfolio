@@ -91,13 +91,13 @@ export default function Contact() {
                 method="post"
                 className="space-y-3 w-full md:w-[400px] lg:w-full "
               >
-                <div className="text-base text-gray-300 font-light block lg:flex space-y-3 lg:space-y-0 lg:space-x-3 w-full  ">
+                <div className="text-base text-white font-light block lg:flex space-y-3 lg:space-y-0 lg:space-x-3 w-full  ">
                   <input
                     required={true}
                     type="text"
                     name="from_name"
                     id="userName"
-                    className="outline-none rounded-2xl py-3 px-4 w-full md:w-[400px] lg:w-full  "
+                    className="border-[1px] bg-[#181A1B] outline-none rounded-2xl py-3 px-4 w-full md:w-[400px] lg:w-full  "
                     placeholder="Enter your name"
                     value={toSend.from_name}
                     onChange={handleChange}
@@ -107,50 +107,38 @@ export default function Contact() {
                     type="email"
                     name="reply_to"
                     id="userEmail"
-                    className="outline-none rounded-2xl py-3 px-4 w-full md:w-[400px] lg:w-full   "
+                    className="border-[1px] bg-[#181A1B] outline-none rounded-2xl py-3 px-4 w-full md:w-[400px] lg:w-full   "
                     placeholder="Enter your email address!"
                     value={toSend.from_email}
                     onChange={handleChange}
                   />
                 </div>
-                <div className="text-base text-gray-300 font-light w-full  ">
+                <div className="text-base text-white font-light w-full  ">
                   <input
                     required={true}
                     type="text"
                     name="email_subject"
                     id="emailSubject"
-                    className="outline-none rounded-2xl py-3 px-4 w-full md:w-[400px] lg:w-full "
+                    className="border-[1px] bg-[#181A1B] outline-none rounded-2xl py-3 px-4 w-full md:w-[400px] lg:w-full "
                     placeholder="Enter e-mail subject..."
                     value={toSend.email_subject}
                     onChange={handleChange}
                   />
                 </div>
-                <div className="text-base text-gray-300 font-light w-full">
+                <div className="text-base text-white font-light w-full">
                   <textarea
                     required={true}
                     name="message"
                     id="emailBody"
                     cols="30"
                     rows="5"
-                    className="outline-none rounded-2xl py-3 px-4 w-full md:w-[400px] lg:w-full "
+                    className="border-[1px] bg-[#181A1B] outline-none rounded-2xl py-3 px-4 w-full md:w-[400px] lg:w-full "
                     placeholder="Write your message..."
                     value={toSend.message}
                     onChange={handleChange}
                   />
                 </div>
                 <div>
-                  {/* <input
-                  type="submit"
-                  value="Send Message"
-                  className={
-                    `${
-                      sending
-                        ? " animate-pulse cursor-not-allowed bg-gray-800 "
-                        : " "
-                    }` +
-                    "outline-none font-semibold py-2 px-5 bg-[#322AAD] cursor-pointer text-white rounded-2xl text-base hover:bg-[#D3AE4E]"
-                  }
-                /> */}
                   <button
                     className={
                       `${

@@ -26,7 +26,7 @@ export default function SideMenu() {
         className="text-red-500 cursor-pointer animate-pulse "
         title="download my Resume "
       >
-        <a href="/Ezeugo_Obieze.pdf" download="Ezeugo Felistus Obieze">
+        <a href="/Ezeugo_Obieze.pdf" download="Ezeugo_Felistus_Obieze.pdf">
           <ResumeIcon />
         </a>
       </div>

@@ -32,7 +32,7 @@ export default function Home() {
         />
         <meta
           property="og:description"
-          content="my portfolio, reactjs projects, nextjs projects, reactjs, nextjs, javascript, typescript, soft skills, technical skills"
+          content="portfolio, reactjs, nextjs, javascript, soft skills, technical skills, portfolio project"
         />
         <meta property="og:type" content="website" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
