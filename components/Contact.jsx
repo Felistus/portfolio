@@ -2,7 +2,7 @@ import { useState } from "react";
 import WhatsAppIcon from "./icons/WhatsAppIcon";
 import { send } from "emailjs-com";
 import { toast } from "react-toastify";
-const processID = process.env.NEXT_PUBLIC_ID;
+const userID = process.env.NEXT_PUBLIC_USER_ID;
 
 export default function Contact() {
   const [sending, setSending] = useState(false);
@@ -22,24 +22,29 @@ export default function Contact() {
       toSend.message !== "" &&
       toSend.reply_to !== ""
     ) {
-      send("contact_ID", "template_ID", toSend, processID)
-        .then((response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          setToSend({
-            ...toSend,
-            from_name: "",
-            email_subject: "",
-            message: "",
-            reply_to: "",
+      try {
+        send("contact_ID", "template_ID", toSend, userID)
+          .then((response) => {
+            console.log("SUCCESS!", response.status, response.text);
+            setToSend({
+              ...toSend,
+              from_name: "",
+              email_subject: "",
+              message: "",
+              reply_to: "",
+            });
+            toast.success("Message sent!");
+            setSending(false);
+          })
+          .catch((err) => {
+            toast.error("Email failed to send, please try again!");
+            setSending(false);
+            console.error("FAILED...", err);
           });
-          toast.success("Message sent!");
-          setSending(false);
-        })
-        .catch((err) => {
-          toast.error("Email failed to send, please try again!");
-          setSending(false);
-          console.error("FAILED...", err);
-        });
+      } catch (error) {
+        setSending(false);
+        console.error("error:", error);
+      }
     } else {
       toast.warning("All fields are required.");
       setSending(false);
