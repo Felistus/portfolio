@@ -80,7 +80,7 @@ export default function Home() {
               </section>
             </Suspense>
             <Suspense fallback={<Experience />}>
-              <section id="project" className="px-6 my-20 md:px-12 py-10">
+              <section id="project" className="px-6 my-20 md:px-12 py-10 ">
                 <RecentProject />
               </section>
             </Suspense>

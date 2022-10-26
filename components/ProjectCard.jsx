@@ -6,23 +6,13 @@ import Image from "next/image";
 /* eslint-disable @next/next/no-img-element */
 export default function ProjectCard({ project }) {
   return (
-    <div className="rounded-lg text-center max-w-[350px] project overflow-hidden">
+    <div className="rounded-lg text-center w-full max-w-[350px] h-[180px] project overflow-hidden ">
       <h2 className="card-title">{project.title}</h2>
       <img
         src={project.image}
         alt="responsive web icon"
         className="w-full h-full "
       />
-      {/* <div className="w-[350px] ">
-        <Image
-          src={project.image}
-          alt={project.title}
-          width="500"
-          height="360"
-          objectFit="fill"
-          // className="w-full"
-        />
-      </div> */}
       <div className="card-desc space-x-10  ">
         <button
           className="bg-[#D3AE4E] w-12 h-12 flex justify-center items-center rounded-full"

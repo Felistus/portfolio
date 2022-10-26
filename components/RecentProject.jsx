@@ -72,7 +72,7 @@ export default function RecentProject() {
           </p>
         </div>
 
-        <div className="mt-12 md:grid md:grid-cols-3 md:gap-10 space-y-10 md:space-y-0">
+        <div className="mt-12 md:grid md:grid-cols-3 md:gap-y-10 space-y-10 md:space-y-0 w-full ">
           {work.map((project, id) => (
             <ProjectCard key={id} project={project} />
           ))}
