@@ -1,4 +1,5 @@
 import GithubIcon from "./icons/GithubIcon";
+import DownloadIcon from "./icons/DownloadIcon";
 import LinkedInIcon from "./icons/LinkedInIcon";
 
 /* eslint-disable @next/next/no-img-element */
@@ -18,7 +19,7 @@ export default function Intro() {
             Front-End Developer
           </span>
         </p>
-        <div className="flex space-x-3 my-3">
+        <div className="flex space-x-3 my-3 items-center">
           <div className="cursor-pointer hover:text-[#D3AE4E] text-white">
             <a
               href="https://www.linkedin.com/in/ezeugo-felistus-obieze/"
@@ -37,6 +38,12 @@ export default function Intro() {
               <GithubIcon />
             </a>
           </div>
+          <a href="/Ezeugo_Obieze.pdf" download="Ezeugo_Felistus_Obieze.pdf">
+            <div className="flex hover:bg-[#FF6584] bg-[#322AAD] rounded-xl space-x-2 text-white cursor-pointer px-4 py-1 text-sm animate-pulse">
+              <DownloadIcon />
+              <button>Resume</button>
+            </div>
+          </a>
         </div>
       </div>
       <div className="md:flex md:justify-end xl:block mb-5 md:mb-0 ">

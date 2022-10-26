@@ -35,6 +35,10 @@ export default function Home() {
           content="portfolio, reactjs, nextjs, javascript, soft skills, technical skills, portfolio project"
         />
         <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://my-og-img.vercel.app/api/og"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

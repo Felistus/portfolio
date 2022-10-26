@@ -131,6 +131,16 @@ li {
 }
 
 /* end of animation */
+
+.jaro {
+  background-color: "white";
+  height: "100%";
+  width: "100%";
+  font-size: 100;
+  font-family: '"Typewriter"';
+  padding-top: "100px";
+  padding-left: "50px";
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
