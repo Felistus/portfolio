@@ -5,8 +5,8 @@ export const config = {
 };
 
 // Make sure the font exists in the specified path:
-const font = fetch(new URL("/Blox2.ttf", import.meta.url)).then((res) =>
-  res.arrayBuffer()
+const font = fetch(new URL("../../assets/Blox2.ttf", import.meta.url)).then(
+  (res) => res.arrayBuffer()
 );
 
 export default async function handler() {
